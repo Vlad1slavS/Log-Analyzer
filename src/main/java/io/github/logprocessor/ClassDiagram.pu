@@ -1,0 +1,21 @@
+@startuml LogProcessorDiagram
+
+class LogProcessorService
+
+class FileService
+
+class LogParser
+
+class BalanceCalculator
+
+class TransactionFormatter
+
+LogProcessorService --> FileService : считывание строк
+
+FileService --> LogParser : парсинг логов
+
+LogParser --> BalanceCalculator : подсчет баланса
+
+BalanceCalculator --> TransactionFormatter : вывод в файл
+
+@enduml
